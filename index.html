@@ -1,0 +1,384 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript"
+        src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Mobile Manipulation: Emerging Opportunities & Contemporary Challenges</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="nav">
+    <div class="nav-container">
+        <img src="./static/images/icra26.png" width="150px" style="margin-right: 30px;">
+        <a href="index.html#">Home</a>
+        <a href="index.html#intro">Introduction</a>
+        <a href="index.html#call">Call for Papers</a>
+        <a href="index.html#schedule">Schedule</a>
+        <a href="index.html#speakers">Speakers</a>
+        <a href="index.html#organizers">Organizers</a>
+    </div>
+</div>
+
+<div class="title-container">
+    <div style="text-align: center;" class="title-text">
+        <div style="width: 100%; margin: auto;z-index: 2; position: relative;">
+            <div class="subtitle" style="margin: 20px;">ICRA workshop on</div>
+            <h1><b>Beyond Teloperation: Learning from Diverse Human and Simulation Data</b></h1>
+            <!-- <div class="subtitle" style="margin: 0px;">
+                DATE, LOCATION
+            </div> -->
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="section" id="intro">
+        <h2>Introduction</h2>
+
+        <p>
+        Leveraging large-scale human data holds great potential for scaling up robot learning in unstructured, human-centered environments. While collecting teleoperated robot demonstrations is slow and expensive, human demonstrations are abundant, easy to capture, and richly embedded in human-centric environments. With the recent advances in 3D vision, generative modeling, and large-scale policy training, we are getting closer to overcoming the major challenges of using human data for scalable robot learning.
+        </p>
+        <p>
+        This workshop asks the pivotal question: How can we effectively translate this wealth of passive human data into robust robotic action?
+        </p>
+        <p>
+        The <b>Beyond Teloperation: Learning from Diverse Human and Simulation Data</b> workshop intends to answer this question in the following aspects:
+        </p>
+        <ul>
+            <li><b>Perception:</b> How can we build robust and accurate systems for 3D human and object tracking, contact estimation, and affordance recognition from video?</li>
+            <li><b>Representation Learning:</b> What are the right state and action representations for bridging the human-robot embodiment gap?</li>
+            <li><b>World Models:</b> How can we leverage video data to learn predictive models of the world that can be used for planning, control, and simulation?</li>
+            <li><b>Learning in the Loop:</b> How can we incorporate human feedback and active learning to improve the efficiency and robustness of the learning process?</li>
+            <li><b>Collaborative Manipulation:</b> How can we extend these techniques to scenarios involving human-robot collaboration and multi-agent interaction?</li>
+        </ul>
+        <p>
+        This workshop features invited talks, contributed spotlights, posters, and panel discussions to bring together researchers in the fields of robotics, artificial intelligence, and computer vision and foster discussions on how to solve general-purpose robot manipulation via learning from humans.
+        </p>
+    </div>
+
+    <div class="section" id="call">
+        <h2>Call for Papers</h2>
+        <p>
+            We are excited to announce the Call for Papers for the ICRA Beyond Teleoperation workshop. We invite original contributions
+            presenting novel ideas, research, and applications relevant to the workshop's theme.
+        </p>
+
+        <h2>Important Dates</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Event</th>
+                <th>Date</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><strong>Submission Deadline</strong></td>
+                <td>TBD</td>
+            </tr>
+            <tr>
+                <td><strong>Paper Acceptance Notification</strong></td>
+                <td>TBD</td>
+            </tr>
+            <tr>
+                <td><strong>Camera-Ready Deadline</strong></td>
+                <td>TBD</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <h2>Submission Guidelines</h2>
+        <ul>
+            <li><strong>Page Limit:</strong> There are no page length requirements, but we suggest a length around 4-9
+                pages long. There is no limit on
+                the number of pages for references or appendices.
+            </li>
+            <li><strong>Formatting:</strong> Submissions are encouraged to use the RSS 2025, IROS 2025, CoRL 2025,
+                ICRA 2026, ICLR 2026 templates.
+            </li>
+            <li><strong>Anonymity:</strong> All submissions must be anonymized. Please remove any author names,
+                affiliations, or identifying information.
+            </li>
+            <li><strong>Relevant Work:</strong> We welcome references to recently published, relevant work.
+            </li>
+            <li><strong>Archival Status:</strong> All accepted papers are non-archival. Submitting to multiple
+                non-archival workshops is permitted.
+            </li>
+            <li><strong>Submission Link:</strong> <a
+                    href="https://openreview.net/">OpenReview Submission</a></li>
+            <li>
+                <strong>Presentation:</strong> Accepted papers will be presented in the form of posters at the workshop. In addition, selected papers
+                may be invited to deliver spotlight talks.
+            </li>
+        </ul>
+        </p>
+        <h3>Paper topics</h3>
+        <p>
+            A non-exhaustive list of relevant topics:
+        <ul>
+            <li>Perception Methods for Parsing and Processing Human Videos</li>
+            <li>Representation Learning from Human Videos for Downstream Robotics Applications</li>
+            <li>Data Collection Hardware and Systems for Learning from Humans</li>
+            <li>Retargeting Methods for Learning Robot Policies from Humans</li>
+            <li>Learning World Models from In-the-wild Videos</li>
+            <li>Real-to-sim-to-real Methods for Learning from Human Videos</li>
+            <li>Human-in-the-loop Methods for Improving Robot Policies</li>
+            <li>Methods for Collaborative Manipulation</li>
+        </ul>
+        </p>
+
+        <div class="section" id="schedule">
+            <h2>Workshop Schedule</h2>
+            <style type="text/css">
+                .tg .tg-u4qn {
+                    background-color: #D9D9D9;
+                    text-align: left;
+                    vertical-align: bottom
+                }
+
+                .tg-za14 {
+                    width: 600px;
+                }
+
+                /* .tg .tg-7zrl{text-align:left;vertical-align:bottom} */
+            </style>
+            <table class="tg">
+            <thead>
+                <tr>
+                <th class="tg-u4qn"><span style="background-color:#D9D9D9">Start Time</span></th>
+                <th class="tg-u4qn"><span style="background-color:#D9D9D9">End Time</span></th>
+                <th class="tg-u4qn"><span style="background-color:#D9D9D9">Event</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <td class="tg-jkyp">09:00</td>
+                <td class="tg-jkyp">09:10</td>
+                <td class="tg-za14">Opening Remarks</td>
+                </tr>
+                <tr>
+                <td class="tg-jkyp">09:10</td>
+                <td class="tg-jkyp">09:40</td>
+                <td class="tg-za14">Keynote 1</td>
+                </tr>
+                <tr>
+                <td class="tg-jkyp">09:40</td>
+                <td class="tg-jkyp">10:10</td>
+                <td class="tg-za14">Keynote 2</td>
+                </tr>
+                <tr>
+                <td class="tg-jkyp">10:10</td>
+                <td class="tg-jkyp">10:40</td>
+                <td class="tg-za14">Keynote 3</td>
+                </tr>
+                <tr>
+                <td class="tg-jkyp">10:40</td>
+                <td class="tg-jkyp">11:00</td>
+                <td class="tg-za14">Discussion 1</td>
+                </tr>
+                <tr>
+                <td class="tg-jkyp">11:00</td>
+                <td class="tg-jkyp">11:10</td>
+                <td class="tg-za14">Break</td>
+                </tr>
+                <tr>
+                <td class="tg-jkyp">11:10</td>
+                <td class="tg-jkyp">11:40</td>
+                <td class="tg-za14">Spotlight Presentations</td>
+                </tr>
+                <tr>
+                <td class="tg-jkyp">11:40</td>
+                <td class="tg-jkyp">12:30</td>
+                <td class="tg-za14">Meetup</td>
+                </tr>
+                <tr>
+                <td class="tg-jkyp">12:30</td>
+                <td class="tg-jkyp">13:00</td>
+                <td class="tg-za14">Lunch Break</td>
+                </tr>
+                <tr>
+                <td class="tg-jkyp">13:00</td>
+                <td class="tg-jkyp">13:30</td>
+                <td class="tg-za14">Keynote 4</td>
+                </tr>
+                <tr>
+                <td class="tg-jkyp">13:30</td>
+                <td class="tg-jkyp">14:00</td>
+                <td class="tg-za14">Keynote 5</td>
+                </tr>
+                <tr>
+                <td class="tg-jkyp">14:00</td>
+                <td class="tg-jkyp">14:15</td>
+                <td class="tg-za14">Discussion 2</td>
+                </tr>
+                <tr>
+                <td class="tg-jkyp">14:15</td>
+                <td class="tg-jkyp">14:25</td>
+                <td class="tg-za14">Break</td>
+                </tr>
+                <tr>
+                <td class="tg-jkyp">14:25</td>
+                <td class="tg-jkyp">14:55</td>
+                <td class="tg-za14">Keynote 6</td>
+                </tr>
+                <tr>
+                <td class="tg-jkyp">15:00</td>
+                <td class="tg-jkyp">15:30</td>
+                <td class="tg-za14">Keynote 7</td>
+                </tr>
+                <tr>
+                <td class="tg-jkyp">15:30</td>
+                <td class="tg-jkyp">16:00</td>
+                <td class="tg-za14">Keynote 8</td>
+                </tr>
+                <tr>
+                <td class="tg-jkyp">16:00</td>
+                <td class="tg-jkyp">16:45</td>
+                <td class="tg-za14">Panel Discussion</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+
+        <div class="section" id="speakers">
+            <h2>Invited Speakers</h2>
+            <p> listed alphabetically </p>
+            <div class="people">
+                <a href="https://www.cs.cmu.edu/~katef/">
+                    <img src="./static/images/katerina.png">
+                    <div>Katerina Fragkiadaki</div>
+                    <div class="aff">CMU</div>
+                </a>
+
+                <a href="https://ryanhoque.github.io/">
+                    <img src="./static/images/ryan.jpg">
+                    <div>Ryan Hoque</div>
+                    <div class="aff">Apple</div>
+                </a>
+
+                <a href="https://profiles.imperial.ac.uk/e.johns">
+                    <img src="./static/images/edward.jpg">
+                    <div>Edward Johns</div>
+                    <div class="aff">Imperial College London</div>
+                </a>
+
+                <a href="https://www.cs.stanford.edu/people/karen-liu">
+                    <img src="./static/images/karen.jpg">
+                    <div>Karen Liu</div>
+                    <div class="aff">Stanford University</div>
+                </a>
+
+                <a href="https://robertomartinmartin.com/">
+                    <img src="./static/images/roberto.jpg">
+                    <div>Roberto Martin-Martin</div>
+                    <div class="aff">UT Austin</div>
+                </a>
+
+                <a href="https://yuewang.xyz/">
+                    <img src="./static/images/yue.png">
+                    <div>Yue Wang</div>
+                    <div class="aff">USC</div>
+                </a>
+
+                <a href="https://faculty.cc.gatech.edu/~danfei/">
+                    <img src="./static/images/danfei.jpg">
+                    <div>Danfei Xu</div>
+                    <div class="aff">Georgia Tech</div>
+                </a>
+            </div>
+        </div>
+
+
+        <div class="section" id="organizers">
+            <h2>Organizers</h2>
+            <div class="people">
+                <a href="https://kushal2000.github.io">
+                    <img src="./static/images/kushal.jpg">
+                    <div>Kushal Kedia</div>
+                    <div class="aff">Cornell University</div>
+                </a>
+
+                <a href="https://yjy0625.github.io">
+                    <img src="./static/images/jingyun.jpg">
+                    <div>Jingyun Yang</div>
+                    <div class="aff">Stanford University</div>
+                </a>
+
+                <a href="https://zubairirshad.com/">
+                    <img src="./static/images/zubair.jpg">
+                    <div>Zubair Irshad</div>
+                    <div class="aff">Toyota Research Institute</div>
+                </a>
+
+                <a href="https://shahrutav.github.io/">
+                    <img src="./static/images/rutav.png">
+                    <div>Rutav Shah</div>
+                    <div class="aff">UT Austin</div>
+                </a>
+
+                <a href="https://satvik1701.github.io/">
+                    <img src="./static/images/satvik.jpg">
+                    <div>Satvik Sharma</div>
+                    <div class="aff">Stanford University</div>
+                </a>
+
+                <a href="https://hgaurav2k.github.io/">
+                    <img src="./static/images/himanshu.jpg">
+                    <div>Himanshu Gaurav Singh</div>
+                    <div class="aff">Stanford University</div>
+                </a>
+
+                <a href="https://zakharos.github.io/">
+                    <img src="./static/images/sergey.jpg">
+                    <div>Sergey Zakharov</div>
+                    <div class="aff">Toyota Research Institute</div>
+                </a>
+
+                <a href="https://tylerlum.github.io/">
+                    <img src="./static/images/tyler.jpg">
+                    <div>Tyler Lum</div>
+                    <div class="aff">Stanford University</div>
+                </a>
+            </div>
+        </div>
+        <div class="section" id="advisory_board">
+            <h2>Advisory Board</h2>
+            <div class="people">
+                <a href="https://web.stanford.edu/~bohg/">
+                    <img src="./static/images/jeannette.png">
+                    <div>Jeannette Bohg</div>
+                    <div class="aff">Stanford University</div>
+                </a>
+
+                <a href="https://antonilo.github.io/">
+                    <img src="./static/images/antonio.jpg">
+                    <div>Antonio Loquercio</div>
+                    <div class="aff">University of Pennsylvania</div>
+                </a>
+
+                <a href="https://yukezhu.me/">
+                    <img src="./static/images/yuke.jpg">
+                    <div>Yuke Zhu</div>
+                    <div class="aff">The University of Texas at Austin</div>
+                </a>
+            </div>
+        </div>
+
+
+        <div class="foot">
+            The website template is borrowed from <a
+                href="https://ai-workshops.github.io/generalizable-policy-learning-in-the-physical-world/">here</a>.
+            <br>
+            For inquiries, contact us at: <a href="mailto:icra-beyond-teleop@googlegroups.com">icra-beyond-teleop@googlegroups.com</a>
+        </div>
+</body>
+</html>
