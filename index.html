@@ -62,23 +62,23 @@
     <h2 class="text-3xl sm:text-4xl font-light mb-4">Introduction</h2>
 
     <p>
-    Leveraging large-scale human data holds great potential for scaling up robot learning in unstructured, human-centered environments. While collecting teleoperated robot demonstrations is slow and expensive, human demonstrations are abundant, easy to capture, and richly embedded in human-centric environments. With the recent advances in 3D vision, generative modeling, and large-scale policy training, we are getting closer to overcoming the major challenges of using human data for scalable robot learning.
+    Recent progress in training foundation models for robotics has been driven largely by large, real-world robot datasets. Collecting such data requires labor-intensive and expensive teleoperation to provide high-quality expert demonstrations, making it intractable to scale across diverse tasks and environments. As a result, robotics datasets still remain much smaller compared to the massive corpora that drove revolutions in NLP and CV. By contrast, off-domain data sources such as human videos and large-scale simulation exist in abundance, and could unlock robot learning at scale.
     </p>
     <p>
-    This workshop asks the pivotal question: How can we effectively translate this wealth of passive human data into robust robotic action?
+    However, both human and simulation data are mismatched for robot learning. Human demonstrations are fundamentally different in embodiment from robots, preventing direct motion transfer, whereas simulations, despite their scalability, often lack the fidelity needed to faithfully model the real world.
+    This workshop asks the pivotal question: <b>How can we move beyond teleoperation and effectively use abundant off-domain data sources for robot learning?</b>
     </p>
     <p>
-    The <b>Beyond Teloperation: Learning from Diverse Human and Simulation Data</b> workshop intends to answer this question in the following aspects:
+    In the <b>Beyond Teloperation: Learning from Diverse Human and Simulation Data</b> workshop, we are particularly interested in methods that
     </p>
     <ul class="list-disc pl-5 space-y-2">
-        <li><b>Perception:</b> How can we build robust and accurate systems for 3D human and object tracking, contact estimation, and affordance recognition from video?</li>
-        <li><b>Representation Learning:</b> What are the right state and action representations for bridging the human-robot embodiment gap?</li>
-        <li><b>World Models:</b> How can we leverage video data to learn predictive models of the world that can be used for planning, control, and simulation?</li>
-        <li><b>Learning in the Loop:</b> How can we incorporate human feedback and active learning to improve the efficiency and robustness of the learning process?</li>
-        <li><b>Collaborative Manipulation:</b> How can we extend these techniques to scenarios involving human-robot collaboration and multi-agent interaction?</li>
+        <li>extract actionable, transferable representations from human videos for robot policy learning</li>
+        <li>develop world models and real-to-sim-to-real frameworks that ground simulation in real-world human activity</li>
+        <li>combine small, high-quality teleoperation datasets with large-scale off-domain sources to balance fidelity and scalability</li>
+        <li>bridge embodiment and sim-to-real gaps to ensure generalization across domains</li>
     </ul>
     <p>
-    This workshop features invited talks, contributed spotlights, posters, and panel discussions to bring together researchers in the fields of robotics, artificial intelligence, and computer vision and foster discussions on how to solve general-purpose robot manipulation via learning from humans.
+    We aim to convene a diverse set of perspectives—from robot learning, 3D computer vision, embodied AI, simulation, and human-robot interaction—to discuss what it means to scale robot learning beyond teleoperation, and to define the research agenda for making these methods robust and deployable in real-world settings.
     </p>
   </section>
 
@@ -169,91 +169,86 @@
           </tr>
         </thead>
         <tbody class="bg-white divide-y divide-gray-200">
-            <tr>
+          <tr>
             <td class="px-4 py-2">09:00</td>
             <td class="px-4 py-2">09:10</td>
-            <td class="px-4 py-2">Opening Remarks</td>
-            </tr>
-            <tr>
+            <td class="px-4 py-2"><em>Welcome</em> (Organizers)</td>
+          </tr>
+          <tr>
             <td class="px-4 py-2">09:10</td>
-            <td class="px-4 py-2">09:40</td>
-            <td class="px-4 py-2">Keynote 1</td>
-            </tr>
-            <tr>
-            <td class="px-4 py-2">09:40</td>
-            <td class="px-4 py-2">10:10</td>
-            <td class="px-4 py-2">Keynote 2</td>
-            </tr>
-            <tr>
-            <td class="px-4 py-2">10:10</td>
-            <td class="px-4 py-2">10:40</td>
-            <td class="px-4 py-2">Keynote 3</td>
-            </tr>
-            <tr>
-            <td class="px-4 py-2">10:40</td>
+            <td class="px-4 py-2">09:50</td>
+            <td class="px-4 py-2">Keynote 1: <strong>Ryan Hoque</strong></td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2">09:50</td>
+            <td class="px-4 py-2">10:30</td>
+            <td class="px-4 py-2">Keynote 2: <strong>Roberto Martin-Martin</strong></td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2">10:30</td>
             <td class="px-4 py-2">11:00</td>
-            <td class="px-4 py-2">Discussion 1</td>
-            </tr>
-            <tr>
+            <td class="px-4 py-2">Coffee Break / Socializing / Posters</td>
+          </tr>
+          <tr>
             <td class="px-4 py-2">11:00</td>
-            <td class="px-4 py-2">11:10</td>
-            <td class="px-4 py-2">Break</td>
-            </tr>
-            <tr>
-            <td class="px-4 py-2">11:10</td>
             <td class="px-4 py-2">11:40</td>
-            <td class="px-4 py-2">Spotlight Presentations</td>
-            </tr>
-            <tr>
+            <td class="px-4 py-2">Keynote 3: <strong>Yue Wang</strong></td>
+          </tr>
+          <tr>
             <td class="px-4 py-2">11:40</td>
-            <td class="px-4 py-2">12:30</td>
-            <td class="px-4 py-2">Meetup</td>
-            </tr>
-            <tr>
-            <td class="px-4 py-2">12:30</td>
-            <td class="px-4 py-2">13:00</td>
-            <td class="px-4 py-2">Lunch Break</td>
-            </tr>
-            <tr>
-            <td class="px-4 py-2">13:00</td>
+            <td class="px-4 py-2">12:20</td>
+            <td class="px-4 py-2">Keynote 4: <strong>Danfei Xu</strong></td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2">12:20</td>
             <td class="px-4 py-2">13:30</td>
-            <td class="px-4 py-2">Keynote 4</td>
-            </tr>
-            <tr>
+            <td class="px-4 py-2">Lunch Break / Socializing</td>
+          </tr>
+          <tr>
             <td class="px-4 py-2">13:30</td>
             <td class="px-4 py-2">14:00</td>
-            <td class="px-4 py-2">Keynote 5</td>
-            </tr>
-            <tr>
+            <td class="px-4 py-2">Student Spotlight Talks</td>
+          </tr>
+          <tr>
             <td class="px-4 py-2">14:00</td>
-            <td class="px-4 py-2">14:15</td>
-            <td class="px-4 py-2">Discussion 2</td>
-            </tr>
-            <tr>
-            <td class="px-4 py-2">14:15</td>
-            <td class="px-4 py-2">14:25</td>
-            <td class="px-4 py-2">Break</td>
-            </tr>
-            <tr>
-            <td class="px-4 py-2">14:25</td>
-            <td class="px-4 py-2">14:55</td>
-            <td class="px-4 py-2">Keynote 6</td>
-            </tr>
-            <tr>
-            <td class="px-4 py-2">15:00</td>
-            <td class="px-4 py-2">15:30</td>
-            <td class="px-4 py-2">Keynote 7</td>
-            </tr>
-            <tr>
-            <td class="px-4 py-2">15:30</td>
-            <td class="px-4 py-2">16:00</td>
-            <td class="px-4 py-2">Keynote 8</td>
-            </tr>
-            <tr>
-            <td class="px-4 py-2">16:00</td>
-            <td class="px-4 py-2">16:45</td>
-            <td class="px-4 py-2">Panel Discussion</td>
-            </tr>
+            <td class="px-4 py-2">14:30</td>
+            <td class="px-4 py-2">Poster Session</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2">14:30</td>
+            <td class="px-4 py-2">15:10</td>
+            <td class="px-4 py-2">Keynote 5: <strong>Edward Johns</strong></td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2">15:10</td>
+            <td class="px-4 py-2">15:50</td>
+            <td class="px-4 py-2">Keynote 6: <strong>Karen Liu</strong></td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2">15:50</td>
+            <td class="px-4 py-2">16:30</td>
+            <td class="px-4 py-2">Keynote 7: <strong>Katerina Fragkiadaki</strong></td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2">16:30</td>
+            <td class="px-4 py-2">16:50</td>
+            <td class="px-4 py-2">Coffee Break / Socializing / Posters</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2">16:50</td>
+            <td class="px-4 py-2">17:20</td>
+            <td class="px-4 py-2">Debate Session 1</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2">17:20</td>
+            <td class="px-4 py-2">17:50</td>
+            <td class="px-4 py-2">Debate Session 2</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2">17:50</td>
+            <td class="px-4 py-2">18:00</td>
+            <td class="px-4 py-2">Closing Remarks</td>
+          </tr>
         </tbody>
       </table>
     </div>
@@ -316,16 +311,16 @@
             <div class="text-sm text-gray-500">Cornell University</div>
         </a>
 
-        <a href="https://yjy0625.github.io" class="text-center">
-            <img src="./static/images/jingyun.jpg" alt="Jingyun" class="mx-auto w-36 h-36 rounded-full object-cover">
-            <div class="mt-2">Jingyun Yang</div>
-            <div class="text-sm text-gray-500">Stanford University</div>
-        </a>
-
         <a href="https://zubairirshad.com/" class="text-center">
             <img src="./static/images/zubair.jpg" alt="Zubair" class="mx-auto w-36 h-36 rounded-full object-cover">
             <div class="mt-2">Zubair Irshad</div>
             <div class="text-sm text-gray-500">Toyota Research Institute</div>
+        </a>
+
+        <a href="https://yjy0625.github.io" class="text-center">
+            <img src="./static/images/jingyun.jpg" alt="Jingyun" class="mx-auto w-36 h-36 rounded-full object-cover">
+            <div class="mt-2">Jingyun Yang</div>
+            <div class="text-sm text-gray-500">Stanford University</div>
         </a>
 
         <a href="https://shahrutav.github.io/" class="text-center">
@@ -346,16 +341,16 @@
             <div class="text-sm text-gray-500">Stanford University</div>
         </a>
 
-        <a href="https://zakharos.github.io/" class="text-center">
-            <img src="./static/images/sergey.jpg" alt="Sergey" class="mx-auto w-36 h-36 rounded-full object-cover">
-            <div class="mt-2">Sergey Zakharov</div>
-            <div class="text-sm text-gray-500">Toyota Research Institute</div>
-        </a>
-
         <a href="https://tylerlum.github.io/" class="text-center">
             <img src="./static/images/tyler.jpg" alt="Tyler" class="mx-auto w-36 h-36 rounded-full object-cover">
             <div class="mt-2">Tyler Lum</div>
             <div class="text-sm text-gray-500">Stanford University</div>
+        </a>
+
+        <a href="https://zakharos.github.io/" class="text-center">
+            <img src="./static/images/sergey.jpg" alt="Sergey" class="mx-auto w-36 h-36 rounded-full object-cover">
+            <div class="mt-2">Sergey Zakharov</div>
+            <div class="text-sm text-gray-500">Toyota Research Institute</div>
         </a>
     </div>
   </section>
