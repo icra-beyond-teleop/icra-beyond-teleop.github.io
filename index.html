@@ -1,175 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-</script>
-<script type="text/javascript"
-        src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
+    <meta name="description" content="ICRA 2026 workshop on moving beyond teleoperation for robot learning, exploring diverse human demonstrations, simulation, and multi-source data for dexterous and general-purpose manipulation.">
     <title>ICRA 2026 Beyond Teleoperation Workshop</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+      body { font-family: 'Roboto', sans-serif; font-weight: 300; }
+      h1, h2, h3, h4, h5, h6, th, strong, b { font-weight: 500; }
+      nav a { font-weight: 400; }
+      table tbody tr:nth-child(even) { background-color: #f9fafb; }
+    </style>
 </head>
 
 <body class="bg-white text-gray-800 antialiased">
 
-<header class="sticky top-0 z-30 bg-white shadow-sm">
+<header class="sticky top-0 z-30 bg-gray-50 border-b-2 border-gray-200">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center justify-between h-16">
+    <div class="flex items-center justify-between h-20">
       <div class="flex items-center">
-        <img src="./static/images/icra26.png" alt="logo" class="h-12 mr-6">
-        <nav class="hidden md:flex space-x-6 text-sm text-gray-600">
-          <a href="index.html#" class="hover:text-gray-900">Home</a>
-          <a href="index.html#intro" class="hover:text-gray-900">Introduction</a>
-          <a href="index.html#call" class="hover:text-gray-900">Call for Papers</a>
-          <a href="index.html#schedule" class="hover:text-gray-900">Schedule</a>
-          <a href="index.html#speakers" class="hover:text-gray-900">Speakers</a>
-          <a href="index.html#organizers" class="hover:text-gray-900">Organizers</a>
+        <img src="./static/images/icra26.png" alt="logo" class="h-14 mr-8">
+        <nav class="hidden md:flex space-x-8 text-base text-gray-700 font-normal tracking-wide">
+          <a href="index.html#" class="hover:text-gray-900 transition-colors">Home</a>
+          <a href="index.html#call" class="hover:text-gray-900 transition-colors">Call for Papers</a>
+          <a href="index.html#speakers" class="hover:text-gray-900 transition-colors">Speakers</a>
+          <a href="index.html#panel" class="hover:text-gray-900 transition-colors">Panel</a>
+          <a href="index.html#schedule" class="hover:text-gray-900 transition-colors">Schedule</a>
+          <a href="index.html#organizers" class="hover:text-gray-900 transition-colors">Organizers</a>
+          <a href="index.html#contact" class="hover:text-gray-900 transition-colors">Contact</a>
         </nav>
       </div>
       <div class="md:hidden">
-        <button id="nav-toggle" class="text-gray-600 focus:outline-none">Menu</button>
+        <button id="nav-toggle" class="text-gray-600 focus:outline-none text-base">Menu</button>
       </div>
     </div>
   </div>
   <div id="mobile-nav" class="md:hidden hidden px-4 pb-4">
-    <nav class="flex flex-col space-y-2 text-sm text-gray-600">
-      <a href="index.html#" class="hover:text-gray-900">Home</a>
-      <a href="index.html#intro" class="hover:text-gray-900">Introduction</a>
-      <a href="index.html#call" class="hover:text-gray-900">Call for Papers</a>
-      <a href="index.html#schedule" class="hover:text-gray-900">Schedule</a>
-      <a href="index.html#speakers" class="hover:text-gray-900">Speakers</a>
-      <a href="index.html#organizers" class="hover:text-gray-900">Organizers</a>
+    <nav class="flex flex-col space-y-3 text-sm text-gray-500">
+      <a href="index.html#" class="hover:text-gray-900 transition-colors">Home</a>
+      <a href="index.html#call" class="hover:text-gray-900 transition-colors">Call for Papers</a>
+      <a href="index.html#speakers" class="hover:text-gray-900 transition-colors">Speakers</a>
+      <a href="index.html#panel" class="hover:text-gray-900 transition-colors">Panel</a>
+      <a href="index.html#schedule" class="hover:text-gray-900 transition-colors">Schedule</a>
+      <a href="index.html#organizers" class="hover:text-gray-900 transition-colors">Organizers</a>
+      <a href="index.html#contact" class="hover:text-gray-900 transition-colors">Contact</a>
     </nav>
   </div>
 </header>
 
+<!-- Hero Banner -->
+<section class="w-full" style="background: linear-gradient(135deg, #333, black, #333);">
+  <div class="flex flex-col items-center justify-center text-center text-white px-6 py-16 sm:py-24">
+    <div class="text-base sm:text-lg tracking-widest uppercase opacity-70">ICRA 2026 Workshop</div>
+    <h1 class="mt-6 text-5xl sm:text-8xl font-light leading-snug max-w-5xl tracking-tight">Beyond Teleoperation</h1>
+    <p class="mt-3 text-lg sm:text-2xl font-light opacity-85 max-w-3xl">Learning from Diverse Human and Simulation Data</p>
+    <div class="mt-6 text-base sm:text-lg opacity-70 font-light tracking-wide">June 5th, 2026</div>
+  </div>
+</section>
+
 <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-  <section class="mt-8">
-    <div class="relative mx-auto rounded-3xl overflow-hidden bg-cover bg-center" style="background-image: url('static/images/teaser.png'); height: 18rem; max-width:1000px;">
-      <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-      <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white p-6">
-        <div class="text-xl sm:text-2xl opacity-90">ICRA workshop on</div>
-        <h1 class="mt-3 text-2xl sm:text-4xl font-light leading-tight max-w-3xl"><b>Beyond Teloperation: Learning from Diverse Human and Simulation Data</b></h1>
-        <h2 class="mt-2 text-xl">June 5th, 2026</h2>
-      </div>
-    </div>
-  </section>
 
   <section id="intro" class="mt-12 text-justify">
     <h2 class="text-3xl sm:text-4xl font-light mb-4">Introduction</h2>
 
-    <p class="mb-2">
-    Recent progress in training foundation models for robotics has been driven largely by large, real-world robot datasets. Collecting such data requires labor-intensive and expensive teleoperation to provide high-quality expert demonstrations, making it intractable to scale across diverse tasks and environments. As a result, robotics datasets still remain much smaller compared to the massive corpora that drove revolutions in NLP and CV. By contrast, off-domain data sources such as human videos and large-scale simulation exist in abundance, and could unlock robot learning at scale.
+    <p class="mb-3">
+    Teleoperation has driven progress in robot learning, but it is fundamentally <em>limiting</em>: control interfaces introduce latency and reduce degrees of freedom, producing demonstrations that lack the natural dexterity and diverse strategies humans exhibit in everyday manipulation. Human video and simulation each offer qualitatively different strengths. Unscripted human video captures whole-body coordination, tool use, and manipulation strategies that no teleoperation interface can reproduce. Simulation enables exploration of contact-rich dynamics, failure recovery, and edge cases at scale. Yet both carry challenges: embodiment mismatch and the sim-to-real gap. The central question is not just <em>how do we get more data</em>, but <em>how do we extract what makes these sources qualitatively richer, and bridge the gaps that separate them from deployable robot skills?</em>
     </p>
-    <p class="mb-2">
-    However, both human and simulation data are mismatched for robot learning. Human demonstrations are fundamentally different in embodiment from robots, preventing direct motion transfer, whereas simulations, despite their scalability, often lack the fidelity needed to faithfully model the real world.
-    This workshop asks the pivotal question: <b>How can we move beyond teleoperation and effectively use abundant off-domain data sources for robot learning?</b>
+    <p class="mb-3">
+    This workshop focuses on methods that:
     </p>
-    <p class="mb-2">
-    In the <b>Beyond Teloperation: Learning from Diverse Human and Simulation Data</b> workshop, we are particularly interested in methods that
-    </p>
-    <ul class="list-disc pl-5 space-y-1 mb-2">
-        <li>extract actionable, transferable representations from human videos for robot policy learning</li>
-        <li>develop world models and real-to-sim-to-real frameworks that ground simulation in real-world human activity</li>
-        <li>combine small, high-quality teleoperation datasets with large-scale off-domain sources to balance fidelity and scalability</li>
-        <li>bridge embodiment and sim-to-real gaps to ensure generalization across domains</li>
+    <ul class="list-disc pl-5 space-y-1 mb-3">
+        <li>Learn dexterous manipulation skills from human demonstrations, going beyond what teleoperation interfaces can capture</li>
+        <li>Build world models grounded in real-world physics from diverse, in-the-wild video data</li>
+        <li>Use small, high-quality teleoperation data as an anchor alongside large-scale, diverse off-domain sources</li>
+        <li>Bridge embodiment and sim-to-real gaps to transfer manipulation skills across domains</li>
     </ul>
     <p>
-    We aim to convene a diverse set of perspectives—from robot learning, 3D computer vision, embodied AI, simulation, and human-robot interaction—to discuss what it means to scale robot learning beyond teleoperation, and to define the research agenda for making these methods robust and deployable in real-world settings.
+    We bring together researchers working on learning from human data, simulation, and robot teleoperation to share insights and collaborate on building more general-purpose manipulation systems.
     </p>
   </section>
 
   <section id="call" class="mt-12">
     <h2 class="text-3xl sm:text-4xl font-light mb-4">Call for Papers</h2>
     <p>
-        We are excited to announce the Call for Papers for the ICRA Beyond Teleoperation workshop. We invite original contributions
-        presenting novel ideas, research, and applications relevant to the workshop's theme.
+        We invite original contributions presenting novel ideas, research, and applications relevant to the workshop's theme.
     </p>
 
-    <h2 class="text-2xl font-medium mt-6 mb-3">Important Dates</h2>
+    <h3 class="text-2xl font-medium mt-6 mb-3">Important Dates</h3>
     <div class="overflow-x-auto">
-      <table class="min-w-full divide-y divide-gray-200 border border-gray-200">
-        <thead class="bg-gray-50">
+      <table class="min-w-full border border-gray-200 rounded-lg overflow-hidden">
+        <thead class="bg-gray-100">
         <tr>
-            <th class="px-4 py-2 text-left text-sm font-medium text-gray-700">Event</th>
-            <th class="px-4 py-2 text-left text-sm font-medium text-gray-700">Date</th>
+            <th class="px-4 py-2 text-left text-sm text-gray-700">Event</th>
+            <th class="px-4 py-2 text-left text-sm text-gray-700">Date</th>
         </tr>
         </thead>
-        <tbody class="bg-white divide-y divide-gray-200">
+        <tbody class="divide-y divide-gray-200">
         <tr>
-            <td class="px-4 py-2"> <strong>Submission Deadline</strong></td>
-            <td class="px-4 py-2">March 31st, 2026 11:59pm AOE</td>
+            <td class="px-4 py-2"><strong>Submission Deadline</strong></td>
+            <td class="px-4 py-2">April 24th, 2026 11:59pm AOE</td>
         </tr>
         <tr>
-            <td class="px-4 py-2"><strong>Paper Acceptance Notification</strong></td>
-            <td class="px-4 py-2">April 28th, 2026 11:59pm AOE</td>
-        </tr>
-        <tr>
-            <td class="px-4 py-2"><strong>Camera-Ready Deadline</strong></td>
-            <td class="px-4 py-2">May 7th, 2026 11:59pm AOE</td>
+            <td class="px-4 py-2"><strong>Decisions</strong></td>
+            <td class="px-4 py-2">May 11th, 2026</td>
         </tr>
         </tbody>
       </table>
     </div>
 
-    <h2 class="text-2xl font-medium mt-6 mb-3">Submission Guidelines</h2>
+    <h3 class="text-2xl font-medium mt-6 mb-3">Submission Guidelines</h3>
     <ul class="list-disc pl-5 space-y-2">
-        <li><strong>Page Limit:</strong> There are no page length requirements, but we suggest a length around 4-9
-            pages long. There is no limit on
-            the number of pages for references or appendices.
-        </li>
-        <li><strong>Formatting:</strong> Submissions are encouraged to use the RSS 2025, IROS 2025, CoRL 2025,
-            ICRA 2026, ICLR 2026 templates.
-        </li>
-        <li><strong>Anonymity:</strong> All submissions must be anonymized. Please remove any author names,
-            affiliations, or identifying information.
-        </li>
-        <li><strong>Relevant Work:</strong> We welcome references to recently published, relevant work.
-        </li>
-        <li><strong>Archival Status:</strong> All accepted papers are non-archival. Submitting to multiple
-            non-archival workshops is permitted.
-        </li>
-        <li><strong>Submission Link:</strong> <a
-                href="https://openreview.net/" class="text-blue-600 hover:underline">OpenReview Submission</a></li>
-        <li>
-            <strong>Presentation:</strong> Accepted papers will be presented in the form of posters at the workshop. In addition, selected papers
-            may be invited to deliver spotlight talks.
-        </li>
+        <li>4 pages (excluding references and appendices). Use the <a href="https://www.ieee.org/conferences/publishing/templates.html" class="text-blue-600 hover:underline">ICRA 2026 template</a>.</li>
+        <li>All submissions must be anonymized.</li>
+        <li>Non-archival; dual submission to other non-archival venues is permitted.</li>
+        <li>Accepted papers will be presented as posters; select papers may be invited for spotlight talks.</li>
+        <li><strong>Submit via <a href="https://openreview.net/group?id=IEEE.org/ICRA/2026/Workshop/Beyond_Teleop" class="text-blue-600 hover:underline">OpenReview</a>.</strong></li>
     </ul>
 
-    <h3 class="mt-6 text-xl font-medium">Paper topics</h3>
-    <p>
-        A non-exhaustive list of relevant topics:
-    <ul class="list-disc pl-5 mt-2 space-y-1">
-        <li>Perception Methods for Parsing and Processing Human Videos</li>
-        <li>Representation Learning from Human Videos for Downstream Robotics Applications</li>
-        <li>Data Collection Hardware and Systems for Learning from Humans</li>
-        <li>Retargeting Methods for Learning Robot Policies from Humans</li>
-        <li>Learning World Models from In-the-wild Videos</li>
-        <li>Real-to-sim-to-real Methods for Learning from Human Videos</li>
-        <li>Human-in-the-loop Methods for Improving Robot Policies</li>
-        <li>Methods for Collaborative Manipulation</li>
+    <h3 class="mt-8 text-2xl font-medium mb-4">Paper Topics</h3>
+
+    <div class="space-y-6">
+      <div>
+        <h4 class="text-lg font-medium text-gray-900 mb-2">Learning from Human Videos</h4>
+        <ul class="list-disc pl-5 space-y-1">
+          <li>How can we extract dexterous manipulation skills from human video without direct motion retargeting?</li>
+          <li>What representations best capture manipulation intent across different embodiments?</li>
+          <li>How should we design data collection hardware and systems for learning from humans?</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-lg font-medium text-gray-900 mb-2">Learning from Simulation</h4>
+        <ul class="list-disc pl-5 space-y-1">
+          <li>Can world models trained on in-the-wild video generalize to contact-rich manipulation?</li>
+          <li>How can real-to-sim-to-real pipelines be grounded in real human activity?</li>
+          <li>What level of simulation fidelity is actually needed for effective sim-to-real transfer?</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-lg font-medium text-gray-900 mb-2">Combining Diverse Data Sources</h4>
+        <ul class="list-disc pl-5 space-y-1">
+          <li>Is small, high-quality teleop data a necessary anchor for grounding noisy large-scale data?</li>
+          <li>How can human-in-the-loop methods improve robot policies trained on diverse data?</li>
+          <li>What are effective strategies for combining human, simulated, and robot data for collaborative manipulation?</li>
+        </ul>
+      </div>
+    </div>
+    <p class="mt-4">Submissions on any related topics are also welcome.</p>
+  </section>
+
+  <section id="speakers" class="mt-12">
+    <h2 class="text-3xl sm:text-4xl font-light mb-4">Confirmed Speakers</h2>
+    <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 gap-6 items-start">
+        <a href="https://people.eecs.berkeley.edu/~malik/" class="text-center">
+            <img src="./static/images/jitendra.jpg" alt="Jitendra" class="mx-auto w-36 h-36 rounded-full object-cover">
+            <div class="mt-2">Jitendra Malik</div>
+            <div class="text-sm text-gray-500">UC Berkeley</div>
+        </a>
+
+        <a href="https://profiles.imperial.ac.uk/e.johns" class="text-center">
+            <img src="./static/images/edward.jpg" alt="Edward" class="mx-auto w-36 h-36 rounded-full object-cover">
+            <div class="mt-2">Edward Johns</div>
+            <div class="text-sm text-gray-500">Imperial College London</div>
+        </a>
+
+        <a href="https://faculty.cc.gatech.edu/~danfei/" class="text-center">
+            <img src="./static/images/danfei.jpg" alt="Danfei" class="mx-auto w-36 h-36 rounded-full object-cover">
+            <div class="mt-2">Danfei Xu</div>
+            <div class="text-sm text-gray-500">Georgia Tech</div>
+        </a>
+
+        <a href="https://www.cs.stanford.edu/people/karen-liu" class="text-center">
+            <img src="./static/images/karen.jpg" alt="Karen" class="mx-auto w-36 h-36 rounded-full object-cover">
+            <div class="mt-2">Karen Liu</div>
+            <div class="text-sm text-gray-500">Stanford University</div>
+        </a>
+
+        <a href="https://www.cs.cmu.edu/~katef/" class="text-center">
+            <img src="./static/images/katerina.png" alt="Katerina" class="mx-auto w-36 h-36 rounded-full object-cover">
+            <div class="mt-2">Katerina Fragkiadaki</div>
+            <div class="text-sm text-gray-500">CMU</div>
+        </a>
+
+        <a href="https://yuewang.xyz/" class="text-center">
+            <img src="./static/images/yue.png" alt="Yue" class="mx-auto w-36 h-36 rounded-full object-cover">
+            <div class="mt-2">Yue Wang</div>
+            <div class="text-sm text-gray-500">USC</div>
+        </a>
+
+        <a href="https://robertomartinmartin.com/" class="text-center">
+            <img src="./static/images/roberto.jpg" alt="Roberto" class="mx-auto w-36 h-36 rounded-full object-cover">
+            <div class="mt-2">Roberto Martin-Martin</div>
+            <div class="text-sm text-gray-500">UT Austin</div>
+        </a>
+    </div>
+  </section>
+
+  <section id="panel" class="mt-12">
+    <h2 class="text-3xl sm:text-4xl font-light mb-4">Panel Discussion</h2>
+    <p class="mb-3">Our panel with the invited speakers (4:00-5:00pm) will cover questions such as:</p>
+    <ul class="list-disc pl-5 space-y-1">
+      <li>Does the community truly need to move beyond teleoperation? Should we favor massive (but noisy) human/sim data, or smaller (but clean) robot datasets?</li>
+      <li>What are the "hidden" costs behind using human/simulation data? Can we combine both sources to get the best of both worlds?</li>
+      <li>Is small, high-quality teleop data a necessary "anchor" for grounding large-scale human video/simulation training?</li>
     </ul>
-    </p>
   </section>
 
   <section id="schedule" class="mt-12">
     <h2 class="text-3xl sm:text-4xl font-light mb-4">Workshop Schedule</h2>
 
     <div class="overflow-x-auto">
-      <table class="min-w-full divide-y divide-gray-200 border border-gray-200">
+      <table class="min-w-full border border-gray-200 rounded-lg overflow-hidden">
         <thead class="bg-gray-100">
           <tr>
-            <th class="px-4 py-2 text-left text-sm font-medium text-gray-700">Start Time</th>
-            <th class="px-4 py-2 text-left text-sm font-medium text-gray-700">End Time</th>
-            <th class="px-4 py-2 text-left text-sm font-medium text-gray-700">Event</th>
+            <th class="px-4 py-2 text-left text-sm text-gray-700">Start Time</th>
+            <th class="px-4 py-2 text-left text-sm text-gray-700">End Time</th>
+            <th class="px-4 py-2 text-left text-sm text-gray-700">Event</th>
           </tr>
         </thead>
-        <tbody class="bg-white divide-y divide-gray-200">
+        <tbody class="divide-y divide-gray-200">
           <tr>
             <td class="px-4 py-2">08:30</td>
             <td class="px-4 py-2">09:00</td>
@@ -245,60 +300,25 @@
     </div>
   </section>
 
-  <section id="speakers" class="mt-12">
-    <h2 class="text-3xl sm:text-4xl font-light mb-4">Invited Speakers</h2>
-    <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 gap-6 items-start">
-        <a href="https://people.eecs.berkeley.edu/~malik/" class="text-center">
-            <img src="./static/images/jitendra.jpg" alt="Jitendra" class="mx-auto w-36 h-36 rounded-full object-cover">
-            <div class="mt-2">Jitendra Malik</div>
-            <div class="text-sm text-gray-500">UC Berkeley</div>
-        </a>
-
-        <a href="https://profiles.imperial.ac.uk/e.johns" class="text-center">
-            <img src="./static/images/edward.jpg" alt="Edward" class="mx-auto w-36 h-36 rounded-full object-cover">
-            <div class="mt-2">Edward Johns</div>
-            <div class="text-sm text-gray-500">Imperial College London</div>
-        </a>
-
-        <a href="https://faculty.cc.gatech.edu/~danfei/" class="text-center">
-            <img src="./static/images/danfei.jpg" alt="Danfei" class="mx-auto w-36 h-36 rounded-full object-cover">
-            <div class="mt-2">Danfei Xu</div>
-            <div class="text-sm text-gray-500">Georgia Tech</div>
-        </a>
-
-        <a href="https://www.cs.stanford.edu/people/karen-liu" class="text-center">
-            <img src="./static/images/karen.jpg" alt="Karen" class="mx-auto w-36 h-36 rounded-full object-cover">
-            <div class="mt-2">Karen Liu</div>
-            <div class="text-sm text-gray-500">Stanford University</div>
-        </a>
-
-        <a href="https://www.cs.cmu.edu/~katef/" class="text-center">
-            <img src="./static/images/katerina.png" alt="Katerina" class="mx-auto w-36 h-36 rounded-full object-cover">
-            <div class="mt-2">Katerina Fragkiadaki</div>
-            <div class="text-sm text-gray-500">CMU</div>
-        </a>
-
-        <a href="https://yuewang.xyz/" class="text-center">
-            <img src="./static/images/yue.png" alt="Yue" class="mx-auto w-36 h-36 rounded-full object-cover">
-            <div class="mt-2">Yue Wang</div>
-            <div class="text-sm text-gray-500">USC</div>
-        </a>
-
-        <a href="https://robertomartinmartin.com/" class="text-center">
-            <img src="./static/images/roberto.jpg" alt="Roberto" class="mx-auto w-36 h-36 rounded-full object-cover">
-            <div class="mt-2">Roberto Martin-Martin</div>
-            <div class="text-sm text-gray-500">UT Austin</div>
-        </a>
-    </div>
-  </section>
-
-  <section id="organizers" class="mt-12">
+  <section id="organizers" class="mt-12 mb-12">
     <h2 class="text-3xl sm:text-4xl font-light mb-4">Organizers</h2>
     <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 gap-6 items-start">
         <a href="https://kushal2000.github.io" class="text-center">
             <img src="./static/images/kushal.jpg" alt="Kushal" class="mx-auto w-36 h-36 rounded-full object-cover">
             <div class="mt-2">Kushal Kedia</div>
             <div class="text-sm text-gray-500">Cornell University</div>
+        </a>
+
+        <a href="https://shahrutav.github.io/" class="text-center">
+            <img src="./static/images/rutav.png" alt="Rutav" class="mx-auto w-36 h-36 rounded-full object-cover">
+            <div class="mt-2">Rutav Shah</div>
+            <div class="text-sm text-gray-500">UT Austin</div>
+        </a>
+
+        <a href="https://dvij542.github.io/" class="text-center">
+            <img src="./static/images/dvij.jpg" alt="dvij" class="mx-auto w-36 h-36 rounded-full object-cover">
+            <div class="mt-2">Dvij Kalaria</div>
+            <div class="text-sm text-gray-500">UC Berkeley</div>
         </a>
 
         <a href="https://zubairirshad.com/" class="text-center">
@@ -313,12 +333,6 @@
             <div class="text-sm text-gray-500">Stanford University</div>
         </a>
 
-        <a href="https://shahrutav.github.io/" class="text-center">
-            <img src="./static/images/rutav.png" alt="Rutav" class="mx-auto w-36 h-36 rounded-full object-cover">
-            <div class="mt-2">Rutav Shah</div>
-            <div class="text-sm text-gray-500">UT Austin</div>
-        </a>
-
         <a href="https://satvik1701.github.io/" class="text-center">
             <img src="./static/images/satvik.jpg" alt="Satvik" class="mx-auto w-36 h-36 rounded-full object-cover">
             <div class="mt-2">Satvik Sharma</div>
@@ -328,12 +342,6 @@
         <a href="https://hgaurav2k.github.io/" class="text-center">
             <img src="./static/images/himanshu.jpg" alt="Himanshu" class="mx-auto w-36 h-36 rounded-full object-cover">
             <div class="mt-2">Himanshu Gaurav Singh</div>
-            <div class="text-sm text-gray-500">UC Berkeley</div>
-        </a>
-
-        <a href="https://dvij542.github.io/" class="text-center">
-            <img src="./static/images/dvij.jpg" alt="dvij" class="mx-auto w-36 h-36 rounded-full object-cover">
-            <div class="mt-2">Dvij Kalaria</div>
             <div class="text-sm text-gray-500">UC Berkeley</div>
         </a>
 
@@ -348,12 +356,7 @@
             <div class="mt-2">Sergey Zakharov</div>
             <div class="text-sm text-gray-500">Toyota Research Institute</div>
         </a>
-    </div>
-  </section>
 
-  <section id="advisory_board" class="mt-12 mb-12">
-    <h2 class="text-3xl sm:text-4xl font-light mb-4">Advisory Board</h2>
-    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-6 items-start">
         <a href="https://web.stanford.edu/~bohg/" class="text-center">
             <img src="./static/images/jeannette.png" alt="Jeannette" class="mx-auto w-36 h-36 rounded-full object-cover">
             <div class="mt-2">Jeannette Bohg</div>
@@ -369,22 +372,23 @@
         <a href="https://yukezhu.me/" class="text-center">
             <img src="./static/images/yuke.jpg" alt="Yuke" class="mx-auto w-36 h-36 rounded-full object-cover">
             <div class="mt-2">Yuke Zhu</div>
-            <div class="text-sm text-gray-500">The University of Texas at Austin</div>
+            <div class="text-sm text-gray-500">UT Austin</div>
         </a>
     </div>
   </section>
 
-  <footer class="bg-gray-900 text-white py-6 px-4 rounded-t-lg">
-    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center">
-      <div class="text-sm">
-        The website template is borrowed from <a href="https://ai-workshops.github.io/generalizable-policy-learning-in-the-physical-world/" class="underline text-white">here</a>.
-      </div>
-      <div class="text-sm mt-3 sm:mt-0">
-        For inquiries, contact us at: <a href="mailto:icra-beyond-teleop@googlegroups.com" class="underline text-white">icra-beyond-teleop@googlegroups.com</a>
-      </div>
-    </div>
-  </footer>
+  <section id="contact" class="mt-12 mb-12">
+    <h2 class="text-3xl sm:text-4xl font-light mb-4">Contact</h2>
+    <p>For inquiries, reach us at <a href="mailto:icra-beyond-teleop@googlegroups.com" class="text-blue-600 hover:underline">icra-beyond-teleop@googlegroups.com</a>.</p>
+  </section>
+
 </main>
+
+<footer class="bg-gray-900 text-white py-6 px-4">
+  <div class="max-w-6xl mx-auto text-center text-sm">
+    The website template is borrowed from <a href="https://ai-workshops.github.io/generalizable-policy-learning-in-the-physical-world/" class="underline text-white">here</a>.
+  </div>
+</footer>
 
 <script>
   // Mobile nav toggle
