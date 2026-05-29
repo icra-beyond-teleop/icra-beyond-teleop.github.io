@@ -27,10 +27,10 @@
         <img src="./static/images/icra26.png" alt="logo" class="h-14 mr-8">
         <nav class="hidden md:flex space-x-8 text-base text-gray-700 font-normal tracking-wide">
           <a href="index.html#" class="hover:text-gray-900 transition-colors">Home</a>
-          <a href="index.html#call" class="hover:text-gray-900 transition-colors">Call for Papers</a>
           <a href="index.html#speakers" class="hover:text-gray-900 transition-colors">Speakers</a>
           <a href="index.html#panel" class="hover:text-gray-900 transition-colors">Panel</a>
           <a href="index.html#schedule" class="hover:text-gray-900 transition-colors">Schedule</a>
+          <a href="index.html#accepted" class="hover:text-gray-900 transition-colors">Accepted Papers</a>
           <a href="index.html#organizers" class="hover:text-gray-900 transition-colors">Organizers</a>
           <a href="index.html#contact" class="hover:text-gray-900 transition-colors">Contact</a>
         </nav>
@@ -43,10 +43,10 @@
   <div id="mobile-nav" class="md:hidden hidden px-4 pb-4">
     <nav class="flex flex-col space-y-3 text-sm text-gray-500">
       <a href="index.html#" class="hover:text-gray-900 transition-colors">Home</a>
-      <a href="index.html#call" class="hover:text-gray-900 transition-colors">Call for Papers</a>
       <a href="index.html#speakers" class="hover:text-gray-900 transition-colors">Speakers</a>
       <a href="index.html#panel" class="hover:text-gray-900 transition-colors">Panel</a>
       <a href="index.html#schedule" class="hover:text-gray-900 transition-colors">Schedule</a>
+      <a href="index.html#accepted" class="hover:text-gray-900 transition-colors">Accepted Papers</a>
       <a href="index.html#organizers" class="hover:text-gray-900 transition-colors">Organizers</a>
       <a href="index.html#contact" class="hover:text-gray-900 transition-colors">Contact</a>
     </nav>
@@ -89,76 +89,6 @@
     <p>
     We bring together researchers working on learning from human data, simulation, and robot teleoperation to share insights and collaborate on building more general-purpose manipulation systems.
     </p>
-  </section>
-
-  <section id="call" class="mt-12">
-    <h2 class="text-3xl sm:text-4xl font-light mb-4">Call for Papers</h2>
-    <p>
-        We invite original contributions presenting novel ideas, research, and applications relevant to the workshop's theme.
-    </p>
-
-    <h3 class="text-2xl font-medium mt-6 mb-3">Important Dates</h3>
-    <div class="overflow-x-auto">
-      <table class="min-w-full border border-gray-200 rounded-lg overflow-hidden">
-        <thead class="bg-gray-100">
-        <tr>
-            <th class="px-4 py-2 text-left text-sm text-gray-700">Event</th>
-            <th class="px-4 py-2 text-left text-sm text-gray-700">Date</th>
-        </tr>
-        </thead>
-        <tbody class="divide-y divide-gray-200">
-        <tr>
-            <td class="px-4 py-2"><strong>Submission Deadline</strong></td>
-            <td class="px-4 py-2">April 24th, 2026 11:59pm AOE</td>
-        </tr>
-        <tr>
-            <td class="px-4 py-2"><strong>Decisions</strong></td>
-            <td class="px-4 py-2">May 11th, 2026</td>
-        </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <h3 class="text-2xl font-medium mt-6 mb-3">Submission Guidelines</h3>
-    <ul class="list-disc pl-5 space-y-2">
-        <li>4 pages (excluding references and appendices). Use the <a href="https://www.ieee.org/conferences/publishing/templates.html" class="text-blue-600 hover:underline">ICRA 2026 template</a>.</li>
-        <li>All submissions must be anonymized.</li>
-        <li>Non-archival; dual submission to other non-archival venues is permitted.</li>
-        <li>Accepted papers will be presented as posters; select papers may be invited for spotlight talks.</li>
-        <li><strong>Submit via <a href="https://openreview.net/group?id=IEEE.org/ICRA/2026/Workshop/Beyond_Teleop" class="text-blue-600 hover:underline">OpenReview</a>.</strong></li>
-    </ul>
-
-    <h3 class="mt-8 text-2xl font-medium mb-4">Paper Topics</h3>
-
-    <div class="space-y-6">
-      <div>
-        <h4 class="text-lg font-medium text-gray-900 mb-2">Learning from Human Videos</h4>
-        <ul class="list-disc pl-5 space-y-1">
-          <li>How can we extract dexterous manipulation skills from human video without direct motion retargeting?</li>
-          <li>What representations best capture manipulation intent across different embodiments?</li>
-          <li>How should we design data collection hardware and systems for learning from humans?</li>
-        </ul>
-      </div>
-
-      <div>
-        <h4 class="text-lg font-medium text-gray-900 mb-2">Learning from Simulation</h4>
-        <ul class="list-disc pl-5 space-y-1">
-          <li>Can world models trained on in-the-wild video generalize to contact-rich manipulation?</li>
-          <li>How can real-to-sim-to-real pipelines be grounded in real human activity?</li>
-          <li>What level of simulation fidelity is actually needed for effective sim-to-real transfer?</li>
-        </ul>
-      </div>
-
-      <div>
-        <h4 class="text-lg font-medium text-gray-900 mb-2">Combining Diverse Data Sources</h4>
-        <ul class="list-disc pl-5 space-y-1">
-          <li>Is small, high-quality teleop data a necessary anchor for grounding noisy large-scale data?</li>
-          <li>How can human-in-the-loop methods improve robot policies trained on diverse data?</li>
-          <li>What are effective strategies for combining human, simulated, and robot data for collaborative manipulation?</li>
-        </ul>
-      </div>
-    </div>
-    <p class="mt-4">Submissions on any related topics are also welcome.</p>
   </section>
 
   <section id="speakers" class="mt-12">
@@ -204,6 +134,12 @@
             <img src="./static/images/roberto.jpg" alt="Roberto" class="mx-auto w-36 h-36 rounded-full object-cover">
             <div class="mt-2">Roberto Martín-Martín</div>
             <div class="text-sm text-gray-500">UT Austin</div>
+        </a>
+
+        <a href="https://lightwheel.ai/" class="text-center">
+            <img src="./static/images/steve.jpeg" alt="Steve Xie" class="mx-auto w-36 h-36 rounded-full object-cover">
+            <div class="mt-2">Steve Xie</div>
+            <div class="text-sm text-gray-500">CEO, Lightwheel AI</div>
         </a>
     </div>
   </section>
@@ -284,7 +220,7 @@
           <tr>
             <td class="px-4 py-2">14:30</td>
             <td class="px-4 py-2">15:00</td>
-            <td class="px-4 py-2">Student Spotlights</td>
+            <td class="px-4 py-2"><a href="#accepted" class="text-blue-600 hover:underline">Spotlight Talks</a> (4 papers)</td>
           </tr>
           <tr>
             <td class="px-4 py-2">15:00</td>
@@ -294,7 +230,7 @@
           <tr>
             <td class="px-4 py-2">16:00</td>
             <td class="px-4 py-2">16:20</td>
-            <td class="px-4 py-2">Sponsor Talk: Lightwheel AI</td>
+            <td class="px-4 py-2">Sponsor Talk: Steve Xie (Lightwheel AI)</td>
           </tr>
           <tr>
             <td class="px-4 py-2">16:20</td>
@@ -309,6 +245,56 @@
         </tbody>
       </table>
     </div>
+  </section>
+
+  <section id="accepted" class="mt-12">
+    <h2 class="text-3xl sm:text-4xl font-light mb-4">Accepted Papers</h2>
+    <p class="mb-6">All accepted papers will be presented as posters across two sessions. Four papers were also selected for spotlight talks.</p>
+
+    <h3 class="text-2xl font-medium mt-6 mb-3">Spotlight Talks &mdash; 14:30&ndash;15:00</h3>
+    <ol class="list-decimal pl-5 space-y-2">
+      <li>Humanoid Bimanual Dexterous Manipulation Driven by Egocentric Video</li>
+      <li>MolmoB0T: Large-Scale Simulation Enables Zero-Shot Manipulation</li>
+      <li>UniDex-ViTac: Learning Unified Visuo-Tactile Dexterous Manipulation Policy from Human Video Data</li>
+      <li>DemoDiffusion: One-Shot Human Imitation using Pre-trained Diffusion Policy</li>
+    </ol>
+
+    <h3 class="text-2xl font-medium mt-8 mb-3">Poster Session 1 &mdash; 10:00&ndash;11:00</h3>
+    <ol class="list-decimal pl-5 space-y-2">
+      <li>Reconstructing Hand-Held Objects in 3D from Images and Videos</li>
+      <li>MotionTrans: Human VR Data Enable Motion-Level Learning for Robotic Manipulation Policies</li>
+      <li>One-Shot Learning of Manipulation from RGB-D Videos via Object-Centric Interaction Reasoning</li>
+      <li>Humanoid Bimanual Dexterous Manipulation Driven by Egocentric Video</li>
+      <li>YUBI: Yielding Universal Bidigital Interface for Bimanual Dexterous Manipulation at Scale</li>
+      <li>Dex4D: Task-Agnostic Point Track Policy for Sim-to-Real Dexterous Manipulation</li>
+      <li>Tune to Learn: How Controller Gains Affect Robot Policy Learning</li>
+      <li>CRAFT: Video Diffusion for Bimanual Robot Data Generation</li>
+      <li>Whole-Body Mobile Manipulation using Offline Reinforcement Learning on Sub-optimal Controllers</li>
+      <li>Point Bridge: 3D Representations for Cross Domain Policy Learning</li>
+      <li>IFG: Internet-Scale Guidance for Functional Grasping Generation</li>
+      <li>MolmoB0T: Large-Scale Simulation Enables Zero-Shot Manipulation</li>
+      <li>HumanoidMimicGen: Data Generation for Loco-Manipulation via Whole-Body Planning and Adaptation</li>
+      <li>X-Diffusion: Training Diffusion Policies on Cross-Embodiment Human Demonstrations</li>
+    </ol>
+
+    <h3 class="text-2xl font-medium mt-8 mb-3">Poster Session 2 &mdash; 15:00&ndash;16:00</h3>
+    <ol class="list-decimal pl-5 space-y-2">
+      <li>UniDex-ViTac: Learning Unified Visuo-Tactile Dexterous Manipulation Policy from Human Video Data</li>
+      <li>PHABS: A Handheld Haptic Device for Force-Annotated Bimanual Demonstration Data</li>
+      <li>Learning Whole-Body Humanoid Locomotion via Motion Generation and Motion Tracking</li>
+      <li>Learning Quadruped Locomotion from Casual Videos</li>
+      <li>HOMimic: Distilling Manipulation Trajectories from Human Videos via Multi-Stage Interaction Reasoning and Taxonomy-Aware Retargeting</li>
+      <li>Few-Shot Learning of Tool-Use Skills with Proximity and Tactile Sensing</li>
+      <li>Object-Centric Reward Learning from Action-Free Videos for Long-Horizon Manipulation Beyond Teleoperation</li>
+      <li>Semantic&ndash;Geometric Task Representations for Bimanual Manipulation from Human Demonstrations to Robot Action Planning</li>
+      <li>MobileEgo Anywhere: Open Infrastructure for Long-Horizon Egocentric Data on Commodity Hardware</li>
+      <li>Learning Sim-Grounded Policies for Bimanual Rope Manipulation from Human Teleoperation Data</li>
+      <li>DemoDiffusion: One-Shot Human Imitation using Pre-trained Diffusion Policy</li>
+      <li>Overcoming Distribution Shifts with Autonomous Embodied Data Collection</li>
+      <li>Dream2Flow: Bridging Video Generation and Open-World Manipulation with 3D Object Flow</li>
+      <li>UniLatent: Cross-Embodiment Transfer via Latent Observation Alignment</li>
+      <li>Learning Structured Policies for General Humanoid Loco-Manipulation</li>
+    </ol>
   </section>
 
   <section id="organizers" class="mt-12 mb-12">
